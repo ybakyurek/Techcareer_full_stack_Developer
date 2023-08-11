@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --template_bg_color: white;
+    --template_color: black;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    background-color: var(--template_bg_color);
+    color: var(--template_color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+}
+
+
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem auto;
+
+}
+
+.container_data {
+    width: 95%;
+    position: relative;
+    margin-left: 2%;
+    margin-top: 20%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 1rem;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(255, 255, 255, 0.22) 0px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(255, 255, 255, 0.22) 0px 10px 10px;
+}
+
+/* .form_data{
+    position: static;
+} */
+
+.icon_data {
+    position: absolute;
+    color: #070ee4;
+    margin-left: 0.8rem;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* 
+1. `.icon_data`: Bu kural, `.icon_data` sınıfına sahip öğeler için stil tanımını belirtir.
+2. `position: absolute;`: Bu özellik, öğeleri mutlak bir pozisyonda konumlandırır. Yani diğer öğelerin akışına katılmaz ve pozisyonu belirtilen bir referansa göre ayarlanır.
+3. `color: #070ee4;`: Bu özellik, öğelerin metin rengini maviye (`#070ee4`) ayarlar.
+4. `margin-left: 0.8rem;`: Bu özellik, öğelerin sol kenarından `0.8rem` boşluk bırakır.
+5. `margin-top: 0.5rem;`: Bu özellik, öğelerin üst kenarından `0.5rem` boşluk bırakır.
+6. `font-size: 1.3rem;`: Bu özellik, öğelerin metin boyutunu `1.3rem` olarak ayarlar.
+Bu kod parçası, `.icon_data` sınıfına sahip öğelerin pozisyonu, metin rengi, kenar boşlukları ve metin boyutu gibi stil özelliklerini belirler. Bu tür bir stil genellikle simgeler veya ikonlar için kullanılır. */
+
+.input_data {
+    width: 96%;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* 
+1. `.input_data`: Bu kural, `.input_data` sınıfına sahip öğeler için stil tanımını belirtir.
+2. `width: 96%;`: Bu özellik, öğelerin genişliğini %96 olarak ayarlar. Bu sayede öğeler, içeriklerinin %96'sını kaplayacak şekilde genişleyecektir.
+3. `font-size: 1rem;`: Bu özellik, öğelerin metin boyutunu `1rem` olarak ayarlar. Bu, öğelerdeki metin boyutunu belirler.
+4. `text-align: center;`: Bu özellik, öğelerin içindeki metni yatayda merkezlemek için kullanılır. Metin içeriği merkezlenir.
+Bu kod parçası, `.input_data` sınıfına sahip öğelerin genişliği, metin boyutu ve içerik metninin yatayda merkezlenmesi gibi stil özelliklerini belirler. */
+
+/* INPUT */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: .4rem;
+    margin-bottom: .6rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/*
+1. `input[type="text"], input[type="email"], input[type="password"]`: Bu kural, hem metin (tipi "text") girişi, hem de e-posta (tipi "email") ve şifre (tipi "password") girişi alanları için stil tanımını belirtir.
+2. `padding: .4rem;`: Bu özellik, giriş alanının iç kenar boşluklarını belirler. Sırasıyla yukarı, sağ, aşağı ve sol kenar boşluklarını `.4rem` olarak ayarlar.
+3. `margin-bottom: .6rem;`: Bu özellik, giriş alanlarının alt kenarından `.6rem` boşluk bırakır. Bu, giriş alanlarının altında bir boşluk oluşturur.
+4. `border-radius: 1rem;`: Bu özellik, giriş alanlarının kenarlarını yuvarlatır. Kenar yarıçapı `.6rem` olarak ayarlanmıştır.
+5. `cursor: pointer;`: Bu özellik, fare üzeri gelindiğinde imlecin şeklini belirler. `pointer` değeri, imlecin el işareti şeklinde görünmesini sağlar.
+
+Bu kod parçası, metin, e-posta ve şifre girişi alanları için kenar boşlukları, yuvarlatılmış kenarlar ve fare imleci gibi bazı stil özelliklerini belirler. */
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background-color: var(--template_bg_color);
+    color: var(--template_color);
+}
+
+/* 
+1. `input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus`: Bu kural, hem metin (tipi "text") girişi, hem de e-posta (tipi "email") ve şifre (tipi "password") girişi alanlarına odaklandığınızda (tıkladığınızda) uygulanacak stil tanımını belirtir.
+2. `background-color: var(--template_bg_color);`: Bu özellik, giriş alanının arka plan rengini `--template_bg_color` değişkenine atanmış olan renk değerine ayarlar. Bu renk, CSS değişkenleri kullanılarak belirlenir.
+3. `color: var(--template_color);`: Bu özellik, giriş alanındaki metin rengini `--template_color` değişkenine atanmış olan renk değerine ayarlar. Bu renk, CSS değişkenleri kullanılarak belirlenir.
+Bu kod parçası, metin, e-posta ve şifre girişi alanlarının odaklandığında (tıkladığınızda) arka plan rengi ve metin rengini belirtilen CSS değişkenleri ile değiştirir. Bu genellikle kullanıcının hangi alana tıkladığını ve odaklandığını daha belirgin hale getirmek için kullanılır. */
+
+
+
+/* BUTTON */
+#button_group {
+    margin-left: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* #button_group: Bu kural, button_group kimliğine sahip bir öğe için stil tanımını belirtir. Bu öğe HTML içerisinde <div id="button_group">...</div> gibi bir yapıda olabilir.
+margin-left: 4rem;: Bu özellik, öğenin sol kenarından 4rem boşluk bırakır. Bu, öğenin içeriğini sola doğru uzaklaştırır.
+margin-top: 1rem;: Bu özellik, öğenin üst kenarından 1rem boşluk bırakır. Bu, öğenin içeriğini yukarı doğru uzaklaştırır.
+margin-bottom: 1rem;: Bu özellik, öğenin alt kenarından 1rem boşluk bırakır. Bu, öğenin içeriğini aşağı doğru uzaklaştırır. */
+
+
+button[type="submit"],
+input[type="reset"] {
+    background: #070ee4;
+    color: white;
+    padding: .5rem 1rem .4rem 1rem;
+    border-radius: 10%;
+    margin-right: 0.8rem;
+    width: 39%;
+    transition: 2s ease-in-out;
+}
+
+/* button[type="submit"], input[type="reset"]: Bu kural, hem button öğesi (tipi "submit") hem de input öğesi (tipi "reset") için stil tanımını belirtir.
+background: #070ee4;: Bu özellik, öğelerin arka plan rengini maviye (#070ee4) ayarlar.
+color: white;: Bu özellik, öğelerin metin rengini beyaza ayarlar.
+padding: .5rem 1rem .4rem 1rem;: Bu özellik, düğme içeriğinin iç kenar boşluklarını belirler. Sırasıyla yukarı, sağ, aşağı ve sol kenar boşluklarını .5rem, 1rem, .4rem, 1rem olarak ayarlar.
+border-radius: 10%;: Bu özellik, düğme kenarlarının yuvarlatılma yüzdesini belirler. Düğmelerin köşelerini %10 yuvarlatır.
+margin-right: 0.8rem;: Bu özellik, düğmeler arasında sağdan 0.8rem boşluk bırakır.
+width: 39%;: Bu özellik, düğmelerin genişliğini %39 olarak ayarlar.
+transition: 2s ease-in-out;: Bu özellik, düğmelerdeki stil değişikliklerinin daha yumuşak bir geçiş ile gerçekleşmesini sağlar. 2 saniyelik bir geçiş süresi ve ease-in-out geçiş fonksiyonu kullanılır. */
+
+button[type="submit"]:hover,
+input[type="reset"]:hover {
+    box-shadow: 1px 1px 4px .5px rgba(0, 0, 0, 0.8);
+    transition: 2s all;
+    background: white;
+    color: #070ee4;
+    ;
+}
+
+/* button[type="submit"]:hover, input[type="reset"]:hover: Bu kural, hem button öğesi üzerine gelindiğinde hem de input öğesi (tipi "reset") üzerine gelindiğinde uygulanacak stil tanımını belirtir.
+box-shadow: 1px 1px 4px .5px rgba(0, 0, 0, 0.8);: Bu özellik, öğelerin üzerine gelindiğinde hafif bir gölge efekti oluşturur. Gölge rengi siyah (rgba(0, 0, 0, 0.8)), ve boyutları 1px 1px x 4px olup yayılma miktarı 0.5px'dir.
+transition: 2s all;: Bu özellik, öğelerin üzerine gelindiğinde stil değişikliklerinin daha yumuşak bir geçiş ile gerçekleşmesini sağlar. 2 saniyelik bir geçiş süresi ile tüm stil özellikleri üzerine uygulanır.
+background: white;: Öğelerin üzerine gelindiğinde arka plan rengini beyaza değiştirir.
+color: #070ee4;: Öğelerin üzerine gelindiğinde metin rengini maviye (#070ee4) değiştirir. */
+

@@ -1,0 +1,13 @@
+1. Arastirma Odevi: Semantic ve non-simentic nedir?
+	1. Semantik anlamsaldir. h1, p gibi girilen icerigin ne oldugunu ifade eder.  
+	2. Non semantic ise anlamsal olmayan gorunus ve tasarimi ilgilendiren kisimlardir.div,span gibi. bunlar icerigin ne oldugunu ifade etmez.
+2. Unicode & Ascii chracter nedir?
+            1. ASCII (American Standard Code for Information Interchange): Ingilizce karakterleri iceren karakter kodlama bicimidir. 
+            2. Unicode ise daha genis bir karakter kumesini kapsar. ASCII karakterleri unicode icinde vardir. UTF-8 ve UTF-16 en yaygin olanlar. 8 ve 16 bit sayisini ifade eder. 
+            Ornekler
+            ASCII:
+            0: ASCII kodu 48
+            !: ASCII kodu 33
+            Unicode
+            ©: Unicode kod noktası U+00A9
+            ñ: Unicode kod noktası U+00F1
